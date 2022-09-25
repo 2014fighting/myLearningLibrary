@@ -99,7 +99,7 @@ namespace Send
                     var exchangeName = "exchange_name_test";
                     channel.ExchangeDeclare(
                         exchange: exchangeName,
-                        type: "direct",
+                        type: ExchangeType.Direct,
                         durable: false,
                         autoDelete: false,
                         arguments: null);
