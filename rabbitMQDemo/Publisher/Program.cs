@@ -6,4 +6,6 @@ Console.WriteLine("Hello, World!");
 
 //new PublishFanout().Publish();
 
-new PublishDirect().Publish();
+//new PublishDirect().Publish();
+
+ new PublishTopic().Publish();

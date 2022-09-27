@@ -36,7 +36,7 @@ namespace Publisher
                 autoDelete: false,
                 arguments: null);
 
-            //模拟Direct  可以不需要指定队列 ，在订阅的时候去生成队列名称并绑定到指定的交换机
+            //模拟Direct  可以不需要指定队列 ，在订阅的时候去生成队列名称并绑定到指定的交换机 消息是直接给交换机的
             //channel.QueueDeclare(queue: "hello",//定义一个队列
             //                           durable: false,//消息是否持久化，默认情况下消息会被存到rabbtmq服务器所在的内存中，为了避免rabbtmq宕机消息丢失情况，这里就可以设置true
             //                           exclusive: false,//是否当前连接专属队列
@@ -55,7 +55,7 @@ namespace Publisher
                 //消息内容
                 byte[] body = Encoding.UTF8.GetBytes(message);
                 channel.BasicPublish(exchange: exchangeName,
-                               routingKey: "color_black",
+                               routingKey: "key.like",
                                basicProperties: properties,
                                mandatory:true,
                                body: body);

@@ -6,4 +6,7 @@ Console.WriteLine("Subscriber1 开始订阅!");
 //new SubscriberFanout().Subscriber();
 
 
-new SubscriberDirect().Subscriber();
+//new SubscriberDirect().Subscriber();
+
+
+new SubscriberTopic().Subscriber();
