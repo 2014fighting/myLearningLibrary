@@ -4,4 +4,6 @@ using Publisher;
 Console.WriteLine("Hello, World!");
 
 
-new PublishFanout().Publish();
+//new PublishFanout().Publish();
+
+new PublishDirect().Publish();
