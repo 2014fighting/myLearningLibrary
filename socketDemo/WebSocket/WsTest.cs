@@ -1,7 +1,7 @@
 ﻿using System.Net.WebSockets;
 using System.Text;
 
-namespace WebSocketServer
+namespace WebSocketServerWebApp
 {
     public class WsTest
     {

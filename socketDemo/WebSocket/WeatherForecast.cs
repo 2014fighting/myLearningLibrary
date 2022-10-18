@@ -1,4 +1,4 @@
-namespace WebSocketServer
+namespace WebSocketServerWebApp
 {
     public class WeatherForecast
     {

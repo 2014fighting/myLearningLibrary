@@ -2,7 +2,7 @@
 using System.Net.WebSockets;
 using System.Text;
 
-namespace WebSocketServer.Controllers
+namespace WebSocketServerWebApp.Controllers
 {
     [ApiController]
     public class WebSocketsController : ControllerBase
