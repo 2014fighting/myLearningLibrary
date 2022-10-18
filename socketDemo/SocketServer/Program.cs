@@ -8,7 +8,7 @@ Console.WriteLine("Hello, World!");
 string ip = "127.0.0.1";
 int port = 1111;
 
-Console.WriteLine("服务器启动.....");
+Console.WriteLine("服务端启动.....");
 Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 EndPoint point = new IPEndPoint(IPAddress.Parse(ip), port);
 
@@ -58,8 +58,10 @@ thread.Start();
         {
             //获取从客户端发来的数据
             int length = clientSocket.Receive(buffer);
-            Console.WriteLine("接收客户端{0},消息{1}", clientSocket.RemoteEndPoint.ToString(), Encoding.UTF8.GetString(buffer, 0, length));
-            clientSocket.Send(Encoding.UTF8.GetBytes("服务端发送消息:222"));
+            var receiveMessage = Encoding.UTF8.GetString(buffer, 0, length);
+            Console.WriteLine("接收客户端:{0},消息:{1}", clientSocket.RemoteEndPoint.ToString(), receiveMessage);
+
+            clientSocket.Send(Encoding.UTF8.GetBytes("服务器已经接到你发来的消息：" + receiveMessage));
         }
         catch (Exception ex)
         {
